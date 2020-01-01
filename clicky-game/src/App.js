@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+import Header from "./components/Header";
 import friends from "./friends.json";
 
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title score={this.state.score} highscore={this.state.highscore}>Clicky Game: Remember the Face</Title>
+        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game: Remember the Face</Header>
         {this.state.friends.map(card => (
           <FriendCard
             clickCount={this.clickCount}
