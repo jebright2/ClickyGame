@@ -27,8 +27,8 @@ class App extends Component {
  }
 
  clickCount = id => {
-   this.state.friends.find((o, i) => {
-     if (o.id === id) {
+   this.state.friends.find((f, i) => {
+     if (f.id === id) {
        if (friends[i].count === 0) {
          friends[i].count = friends[i].count + 1;
          this.setState({score: this.state.score + 1}, function() {
