@@ -19,9 +19,9 @@ class App extends Component {
      });
    }
    this.state.friends.forEach(card => {
-     friends.count = 0;
+     card.count = 0;
    });
-   alert(`Game Over! \nscore: ${this.state.score}`);
+   alert(`Game Over! Select team logo to start the game. \nscore: ${this.state.score}`);
    this.setState({score: 0});
    return true;
  }
@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game: Remember the Face</Header>
+        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game: Select each team once!</Header>
         {this.state.friends.map(card => (
           <FriendCard
             clickCount={this.clickCount}
